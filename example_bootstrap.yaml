@@ -1,0 +1,29 @@
+esphome:
+  name: example-bootstrap
+  platform: esp32
+  board: esp32dev
+
+# Load external components
+external_components:
+  - source: github://thargy/ESP32Home-Components
+    components: [bootstrap]
+
+output:
+  - platform: ledc
+    id: fan_pwm
+    pin: 26
+    frequency: 25kHz
+    channel: 0
+
+# example configuration entry
+fan:
+  - platform: bootstrap
+    name: Bootstrap fan
+    output: fan_pwm
+
+    # The following are all optional, and show their default (assuming speed_count=100)
+    initial_value: 100
+    duration: 1s
+    min_value: 0
+    max_value: 100
+    use_higher: true
