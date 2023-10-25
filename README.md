@@ -10,4 +10,4 @@ external_components:
 
 ```
 
-* **bootstrap** - [Bootstrap Fan Component](components\bootstrap\README.md)
+* **bootstrap** - [Bootstrap Fan Component](components/bootstrap/README.md)
